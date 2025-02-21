@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 abstract class ColorManager {
-  static Color primary = const Color(0xFFD59853);
-  static Color secondary = const Color(0xFFEBEBEB);
-  static Color white = const Color(0xffFFFFFF);
+  static Color primary = const Color(0xFF004182);
+  static Color appBarTitleColor = const Color(0xFF06004F);
+  static Color primaryDark = const Color(0xFF06004F);
 
 
 
@@ -24,6 +24,7 @@ abstract class ColorManager {
   static Color lightPrimary = const Color(0xCCd17d11); // color with 80% opacity
   static Color grey1 = const Color(0xff707070);
   static Color grey2 = const Color(0xff797979);
+  static Color white = const Color(0xffFFFFFF);
   static Color error = const Color(0xffe61f34); // red color
 
 

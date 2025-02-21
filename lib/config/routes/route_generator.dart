@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:noqosh_app/config/routes/routes.dart';
-import 'package:noqosh_app/features/auth/presentation/sign_in_screen.dart';
-import 'package:noqosh_app/features/auth/presentation/sign_up_screen.dart';
 import 'package:noqosh_app/features/payment/presentation/pages/payment.dart';
 class RouteGenerator {
   static Route<dynamic> getRoute(RouteSettings settings) {
@@ -9,12 +7,6 @@ class RouteGenerator {
 
       case Routes.paymentRoute:
         return MaterialPageRoute(builder: (_) => const PaymentScreen());
-
-      case Routes.signInRoute:
-        return MaterialPageRoute(builder: (_) => const SignInScreen());
-
-      case Routes.signUpRoute:
-        return MaterialPageRoute(builder: (_) => const SignUpScreen());
 
       // case Routes.cartRoute:
       //   return MaterialPageRoute(builder: (_) => const CartScreen());
@@ -28,6 +20,11 @@ class RouteGenerator {
       // case Routes.productDetails:
       //   return MaterialPageRoute(builder: (_) => const ProductDetails());
 
+      // case Routes.signInRoute:
+      //   return MaterialPageRoute(builder: (_) =>  SignInScreen());
+
+      // case Routes.signUpRoute:
+      //   return MaterialPageRoute(builder: (_) =>  SignUpScreen());
       default:
         return unDefinedRoute();
     }
