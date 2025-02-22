@@ -6,6 +6,7 @@ class AppConstants {
   static const String addToCart = "Add to Cart";
   static const String baseUrl = "https://ecommerce.routemisr.com/";
   static const String paymentBaseUrl = "https://accept.paymobsolutions.com/api/";
+  static const String apiKey = "ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiR0Z6Y3lJNklrMWxjbU5vWVc1MElpd2ljSEp2Wm1sc1pWOXdheUk2TVRBeU5Ea3lNU3dpYm1GdFpTSTZJbWx1YVhScFlXd2lmUS5UQ0ItZTdoVjlpRTJsb0VVNklFaVdqRnVrNk1Bazg5ZjJIX2tueWRTVndTZXFGcENBMXhvT1VZQTFlUTM5bDFnUVJDR0xoWkJUZTc5T1lESjVMdVcwUQ==";
 
   static List<Map<String, dynamic>> favoriteProducts = [
     {
