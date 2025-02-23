@@ -32,8 +32,10 @@ abstract class ImageAssets {
 
 class SvgAssets{
   static const String googleButton = "$svgPath/google_buttom.svg";
-  static const String eye = "$svgPath/Eye.svg";
-  static const String edit = "$svgPath/edit (1) 5.svg";
+  static const String home = "$svgPath/material-symbols_home-rounded.svg";
+  static const String translate = "$svgPath/hugeicons--translate.svg";
+  static const String trips = "$svgPath/material-symbols_trip_edited.svg";
+  static const String settings = "$svgPath/solar_settings-bold.svg";
 }
 
 abstract class IconsAssets {

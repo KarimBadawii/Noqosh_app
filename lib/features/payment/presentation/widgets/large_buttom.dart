@@ -1,12 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:noqosh_app/core/utils/values_manager.dart';
+import '../../../../core/utils/color_manager.dart';
+import '../../../../core/utils/styles_manager.dart';
 
-import '../utils/color_manager.dart';
-import '../utils/styles_manager.dart';
 
-class CustomElevatedButton extends StatelessWidget {
+class LargeButton extends StatelessWidget {
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final String label;
@@ -16,25 +14,25 @@ class CustomElevatedButton extends StatelessWidget {
   final TextStyle? textStyle;
   final bool isStadiumBorder;
 
-  const CustomElevatedButton(
+  const LargeButton(
       {super.key,
-      this.prefixIcon,
-      this.textStyle,
-      this.isStadiumBorder = true,
-      this.backgroundColor,
-      this.radius,
-      this.suffixIcon,
-      required this.label,
-      required this.onTap});
+        this.prefixIcon,
+        this.textStyle,
+        this.isStadiumBorder = true,
+        this.backgroundColor,
+        this.radius,
+        this.suffixIcon,
+        required this.label,
+        required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        style: ElevatedButton.styleFrom(fixedSize: Size(150.w, 40.h),
+        style: ElevatedButton.styleFrom(fixedSize: Size(330.w, 45.h),
           shape: isStadiumBorder
               ? const StadiumBorder()
               : RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.r)),
+              borderRadius: BorderRadius.circular(8.r)),
           backgroundColor: backgroundColor ?? ColorManager.primary,
         ),
         onPressed: onTap,
@@ -45,7 +43,7 @@ class CustomElevatedButton extends StatelessWidget {
               label,
               style: textStyle ??
                   getSemiBoldStyle(color: ColorManager.white)
-                      .copyWith(fontSize: 18.sp),
+                      .copyWith(fontSize: 20.sp),
             ),
           ],
         ));
