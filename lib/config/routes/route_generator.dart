@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:noqosh_app/config/routes/routes.dart';
 import 'package:noqosh_app/features/auth/presentation/sign_in_screen.dart';
 import 'package:noqosh_app/features/auth/presentation/sign_up_screen.dart';
+import 'package:noqosh_app/features/home/presentation/pages/home_page.dart';
 import 'package:noqosh_app/features/payment/presentation/pages/payment.dart';
+import 'package:noqosh_app/features/setting/presentation/pages/setting_page.dart';
+import 'package:noqosh_app/features/translate/presentation/pages/translate_page.dart';
+import 'package:noqosh_app/features/trips/presentation/pages/trips_page.dart';
+
+import '../../main_layout.dart';
 class RouteGenerator {
   static Route<dynamic> getRoute(RouteSettings settings) {
     switch (settings.name) {
-
-      case Routes.paymentRoute:
-        return MaterialPageRoute(builder: (_) => const PaymentScreen());
 
       case Routes.signInRoute:
         return MaterialPageRoute(builder: (_) => const SignInScreen());
@@ -16,17 +19,23 @@ class RouteGenerator {
       case Routes.signUpRoute:
         return MaterialPageRoute(builder: (_) => const SignUpScreen());
 
-      // case Routes.cartRoute:
-      //   return MaterialPageRoute(builder: (_) => const CartScreen());
+      case Routes.mainRoute:
+        return MaterialPageRoute(builder: (_) => const MainLayout());
 
-      // case Routes.mainRoute:
-      //   return MaterialPageRoute(builder: (_) => const MainLayout());
+      case Routes.homeRoute:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
 
-      // case Routes.productsScreenRoute:
-      //   return MaterialPageRoute(builder: (_) => const ProductsScreen());
+      case Routes.translateRoute:
+        return MaterialPageRoute(builder: (_) => const TranslateScreen());
 
-      // case Routes.productDetails:
-      //   return MaterialPageRoute(builder: (_) => const ProductDetails());
+      case Routes.tripsRoute:
+        return MaterialPageRoute(builder: (_) => const TripsScreen());
+
+      case Routes.settingsRoute:
+        return MaterialPageRoute(builder: (_) => const SettingScreen());
+
+      case Routes.paymentRoute:
+        return MaterialPageRoute(builder: (_) => const PaymentScreen());
 
       default:
         return unDefinedRoute();

@@ -6,6 +6,7 @@ import 'config/routes/route_generator.dart';
 import 'core/utils/observer.dart';
 
 
+
 void main() {
   Bloc.observer = MyBlocObserver();
   runApp(const MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         onGenerateRoute: RouteGenerator.getRoute,
-      initialRoute: Routes.paymentRoute,
+      initialRoute: Routes.mainRoute,
       ),
     );
   }
