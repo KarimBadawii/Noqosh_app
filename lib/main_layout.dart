@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:noqosh_app/core/utils/assets_manager.dart';
 import 'package:noqosh_app/core/utils/color_manager.dart';
 import 'package:noqosh_app/features/home/presentation/pages/home_page.dart';
 import 'package:noqosh_app/features/setting/presentation/pages/setting_page.dart';
@@ -47,25 +48,25 @@ class _MainLayoutState extends State<MainLayout> {
         ),
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           CustomBottomNavBarItem(
-            iconPath: "assets/svg_images/material-symbols_home-rounded.svg",
+            iconPath: SvgAssets.home,
             currentIndex: _currentIndex,
             index: 0,
             onPressed: changeSelectionIndex,
           ),
           CustomBottomNavBarItem(
-            iconPath: "assets/svg_images/hugeicons--translate.svg",
+            iconPath: SvgAssets.translate,
             currentIndex: _currentIndex,
             index: 1,
             onPressed: changeSelectionIndex,
           ),
           CustomBottomNavBarItem(
-            iconPath: "assets/svg_images/material-symbols_trip_edited.svg",
+            iconPath: SvgAssets.trips,
             currentIndex: _currentIndex,
             index: 2,
             onPressed: changeSelectionIndex,
           ),
           CustomBottomNavBarItem(
-            iconPath: "assets/svg_images/solar_settings-bold.svg",
+            iconPath: SvgAssets.settings,
             currentIndex: _currentIndex,
             index: 3,
             onPressed: changeSelectionIndex,
