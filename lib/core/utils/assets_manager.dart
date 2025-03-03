@@ -8,6 +8,10 @@ abstract class ImageAssets {
   static const String googleButton = "$imagePath/google_buttom.png";
   static const String facebookButton = "$imagePath/facebook buttom.png";
   static const String appleButton = "$imagePath/Apple buttom.png";
+  static const String detailsBg = "$imagePath/details_bg.png";
+  static const String detailsPreview1 = "$imagePath/Property4.png";
+  static const String detailsPreview2 = "$imagePath/Property5.png";
+  static const String detailsPreview3 = "$imagePath/Property6.png";
 
 
   static const String categoryCardImage = "$imagePath/category_card_image.png";
@@ -32,8 +36,10 @@ abstract class ImageAssets {
 
 class SvgAssets{
   static const String googleButton = "$svgPath/google_buttom.svg";
-  static const String eye = "$svgPath/Eye.svg";
-  static const String edit = "$svgPath/edit (1) 5.svg";
+  static const String home = "$svgPath/material-symbols_home-rounded.svg";
+  static const String translate = "$svgPath/hugeicons--translate.svg";
+  static const String trips = "$svgPath/material-symbols_trip_edited.svg";
+  static const String settings = "$svgPath/solar_settings-bold.svg";
 }
 
 abstract class IconsAssets {
