@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:noqosh_app/config/routes/routes.dart';
 import 'package:noqosh_app/features/auth/presentation/sign_in_screen.dart';
 import 'package:noqosh_app/features/auth/presentation/sign_up_screen.dart';
+import 'package:noqosh_app/features/home/presentation/pages/details_page.dart';
 import 'package:noqosh_app/features/home/presentation/pages/home_page.dart';
 import 'package:noqosh_app/features/payment/presentation/pages/payment.dart';
 import 'package:noqosh_app/features/setting/presentation/pages/setting_page.dart';
@@ -24,6 +25,9 @@ class RouteGenerator {
 
       case Routes.homeRoute:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
+
+      case Routes.detailsRoute:
+        return MaterialPageRoute(builder: (_) => const DetailsScreen());
 
       case Routes.translateRoute:
         return MaterialPageRoute(builder: (_) => const TranslateScreen());
