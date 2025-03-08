@@ -26,6 +26,9 @@ class RouteGenerator {
       case Routes.homeRoute:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
 
+      case Routes.detailsRoute:
+        return MaterialPageRoute(builder: (_) => const DetailsScreen());
+
       case Routes.translateRoute:
         return MaterialPageRoute(builder: (_) => const TranslateScreen());
 

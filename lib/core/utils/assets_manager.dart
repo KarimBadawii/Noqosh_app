@@ -8,7 +8,9 @@ abstract class ImageAssets {
   static const String googleButton = "$imagePath/google_buttom.png";
   static const String facebookButton = "$imagePath/facebook buttom.png";
   static const String appleButton = "$imagePath/Apple buttom.png";
+
   static const String home_bg = "$imagePath/home_bg.png";
+
   static const String detailsBg = "$imagePath/details_bg.png";
   static const String detailsPreview1 = "$imagePath/Property4.png";
   static const String detailsPreview2 = "$imagePath/Property5.png";
