@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:noqosh_app/config/routes/route_generator.dart';
 import 'package:noqosh_app/config/routes/routes.dart';
 import 'package:noqosh_app/core/utils/assets_manager.dart';
@@ -49,19 +50,21 @@ class SignInScreen extends StatelessWidget {
                     height: 10.h,
                   )),
               SizedBox(
-                height: 30.h,
+                height: 50.h,
               ),
               CustomTextField(
                 hint: "Email",
+                textInputType: TextInputType.emailAddress,
               ),
               SizedBox(
-                height: 30.h,
+                height: 50.h,
               ),
               CustomTextField(
                 hint: "Password",
+                textInputType: TextInputType.visiblePassword,
               ),
               SizedBox(
-                height: 10.h,
+                height: 20.h,
               ),
               InkWell(
                 child: Row(
@@ -80,7 +83,9 @@ class SignInScreen extends StatelessWidget {
               Center(
                   child: CustomElevatedButton(
                 label: "Login",
-                onTap: () {},
+                onTap: () {
+                  Navigator.popAndPushNamed(context, Routes.mainRoute);
+                },
               )),
               SizedBox(
                 height: 30.h,
@@ -97,9 +102,9 @@ class SignInScreen extends StatelessWidget {
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Image(image: AssetImage(ImageAssets.googleButton)),
-                  Image(image: AssetImage(ImageAssets.facebookButton)),
-                  Image(image: AssetImage(ImageAssets.appleButton)),
+                  SvgPicture(SvgAssetLoader(SvgAssets.googleButton)),
+                  SvgPicture(SvgAssetLoader(SvgAssets.facebookButton)),
+                  SvgPicture(SvgAssetLoader(SvgAssets.appleButton)),
                 ],
               ),
               SizedBox(

@@ -4,6 +4,7 @@ abstract class ColorManager {
   static Color primary = const Color(0xFFD59853);
   static Color secondary = const Color(0xFFEBEBEB);
   static Color white = const Color(0xffFFFFFF);
+  static Color lightBlue = const Color(0xff2F88FF);
 
 
   static Color whiteGrey = const Color(0xff857f7f);
