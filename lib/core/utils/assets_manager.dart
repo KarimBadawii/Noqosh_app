@@ -39,6 +39,8 @@ abstract class ImageAssets {
 
 class SvgAssets{
   static const String googleButton = "$svgPath/google_buttom.svg";
+  static const String facebookButton = "$svgPath/facebook buttom.svg";
+  static const String appleButton = "$svgPath/Apple buttom.svg";
   static const String home = "$svgPath/material-symbols_home-rounded.svg";
   static const String translate = "$svgPath/hugeicons--translate.svg";
   static const String trips = "$svgPath/material-symbols_trip_edited.svg";

@@ -9,6 +9,7 @@ import 'package:noqosh_app/features/setting/presentation/pages/setting_page.dart
 import 'package:noqosh_app/features/translate/presentation/pages/translate_page.dart';
 import 'package:noqosh_app/features/trips/presentation/pages/trips_page.dart';
 
+import '../../features/home/presentation/pages/details_page.dart';
 import '../../main_layout.dart';
 class RouteGenerator {
   static Route<dynamic> getRoute(RouteSettings settings) {
@@ -24,7 +25,7 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const MainLayout());
 
       case Routes.homeRoute:
-        return MaterialPageRoute(builder: (_) => const HomeScreen());
+        return MaterialPageRoute(builder: (_) =>  HomeScreen());
 
       case Routes.detailsRoute:
         return MaterialPageRoute(builder: (_) => const DetailsScreen());
@@ -43,6 +44,7 @@ class RouteGenerator {
 
       case Routes.chatBotRoute:
         return MaterialPageRoute(builder: (_)=> const ChatBotScreen());
+
 
       default:
         return unDefinedRoute();
