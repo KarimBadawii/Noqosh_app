@@ -21,7 +21,7 @@ class _MainLayoutState extends State<MainLayout> {
   late String iconPath;
 
   List<Widget> screens = [
-    const HomeScreen(),
+     HomeScreen(),
     const TranslateScreen(),
     const TripsScreen(),
     const SettingScreen(),

@@ -8,6 +8,7 @@ import 'package:noqosh_app/core/utils/values_manager.dart';
 import 'package:noqosh_app/core/widget/custom_elevated_button.dart';
 import 'package:noqosh_app/main.dart';
 
+import '../../../config/routes/routes.dart';
 import '../../../core/widget/custom_text_field.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -51,38 +52,47 @@ class SignUpScreen extends StatelessWidget {
               ),
               CustomTextField(
                 hint: "Full Name",
+                textInputType: TextInputType.text,
               ),
               SizedBox(
                 height: 20.h,
               ),
               CustomTextField(
                 hint: "Phone",
+                textInputType: TextInputType.phone,
               ),
               SizedBox(
                 height: 20.h,
               ),
               CustomTextField(
                 hint: "Email",
+                textInputType: TextInputType.emailAddress,
               ),
               SizedBox(
                 height: 20.h,
               ),
               CustomTextField(
                 hint: "Password",
+                textInputType: TextInputType.visiblePassword,
               ),
               SizedBox(
                 height: 20.h,
               ),
               CustomTextField(
-                hint: "Repassword",
+                hint: "RePassword",
+                textInputType: TextInputType.visiblePassword,
               ),
-              Spacer(),
+              SizedBox(
+                height: 60.h,
+              ),
               Center(
                   child: CustomElevatedButton(
                 label: "Register",
-                onTap: () {},
+                onTap: () {
+                  Navigator.popAndPushNamed(context, Routes.mainRoute);
+                },
               )),
-              Spacer()
+
             ],
           ),
         ),

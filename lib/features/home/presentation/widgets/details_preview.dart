@@ -16,7 +16,7 @@ class DetailsPreview extends StatelessWidget {
             height: 20.h,
             decoration: BoxDecoration(
               color: ColorManager.containerGray,
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(20.r),
             ),
             child: Image.asset(image,fit: BoxFit.fill,)
         )

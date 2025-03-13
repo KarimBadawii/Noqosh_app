@@ -42,6 +42,7 @@ dependencies:
   flutter_svg: ^2.0.10
   google_generative_ai: ^0.4.6
   intl: ^0.20.2
+  flutter_native_splash:
 
 dev_dependencies:
   flutter_test:

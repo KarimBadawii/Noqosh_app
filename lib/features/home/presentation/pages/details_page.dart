@@ -26,23 +26,23 @@ class DetailsScreen extends StatelessWidget {
                     decoration: const BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage(ImageAssets.detailsBg),
-                            fit: BoxFit.fill,
+                            fit: BoxFit.cover,
                             alignment: Alignment.topCenter))),
                 // details
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 450),
+                  padding:  EdgeInsets.symmetric(vertical: 450.h),
                   child: Container(
                     width: double.infinity,
-                    height: 500.h,
+                    height: 510.h,
                     decoration: BoxDecoration(
                         color: ColorManager.white,
-                        borderRadius: BorderRadius.circular(25)),
+                        borderRadius: BorderRadius.circular(25.r)),
                     child: Column(
                       children: [
                         // details Attributes
                         SizedBox(
                           width: 366.w,
-                          height: 50.h,
+                          height: 55.h,
                           child: ListView(
                             shrinkWrap: true,
                             scrollDirection: Axis.horizontal,
@@ -131,7 +131,7 @@ class DetailsScreen extends StatelessWidget {
                           ),
                           child: SizedBox(
                             width: 350.w,
-                            height: 100.h,
+                            height: 162.h,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -153,11 +153,11 @@ class DetailsScreen extends StatelessWidget {
                           padding:  EdgeInsets.only(
                             left: 24.0.w,
                             right: 24.0.w,
-                            top: 24.0.h,
+                            top: 19.0.h,
                           ),
                           child: SizedBox(
                             width: 350.w,
-                            height: 200.h,
+                            height: 150.h,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -165,7 +165,7 @@ class DetailsScreen extends StatelessWidget {
                                     style: getMediumStyle(
                                       color: Colors.black,
                                     )),
-                                SizedBox(height: 16.h,),
+                                SizedBox(height: 10.h,),
                                 SizedBox(
                                   width: 350.w,
                                   height: 100.h,
@@ -196,9 +196,9 @@ class DetailsScreen extends StatelessWidget {
               ],),),
           //top bottoms & title
           Positioned(
-            top: 0,
-            right: 0,
-            left: 0,
+            top: 0.h,
+            right: 0.w,
+            left: 0.w,
             child: Padding(
               padding: const EdgeInsets.all(AppPadding.p24),
               child: SizedBox(
@@ -207,14 +207,15 @@ class DetailsScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(AppPadding.p8),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Icon(Icons.arrow_back_ios),
-                      const Spacer(),
+                      IconButton(onPressed: (){
+                        Navigator.pop(context);
+                      }, icon: const Icon(Icons.arrow_back_ios)),
                       Text("Details",
                           style: getMediumStyle(
                             color: Colors.black,
                           )),
-                      const Spacer(),
                       const Icon(
                         Icons.more_horiz_rounded,
                         size: 32,
@@ -227,9 +228,9 @@ class DetailsScreen extends StatelessWidget {
           ),
           // book now button
           Positioned(
-            bottom: 0,
-            right: 0,
-            left: 0,
+            bottom: 0.h,
+            right: 0.w,
+            left: 0.w,
             child: Padding(
               padding: const EdgeInsets.all(AppPadding.p24),
               child: SizedBox(
@@ -241,7 +242,7 @@ class DetailsScreen extends StatelessWidget {
                     style: TextButton.styleFrom(
                       backgroundColor: ColorManager.primary,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.r),
                       ),
                     ),
                     onPressed: () {},
