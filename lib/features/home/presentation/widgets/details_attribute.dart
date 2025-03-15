@@ -15,11 +15,11 @@ class DetailsAttribute extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        width: 90.w,
+        width: 115.w,
         height: 35.h,
         decoration: BoxDecoration(
           color: ColorManager.containerGray,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(10.r),
         ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -27,8 +27,8 @@ class DetailsAttribute extends StatelessWidget {
             const Spacer(),
             Icon(icon, color: color),
             // const Spacer(),
-            const SizedBox(
-              width: 5,
+             SizedBox(
+              width: 5.w,
             ),
 
             Text(text),

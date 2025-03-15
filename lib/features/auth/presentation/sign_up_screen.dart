@@ -55,37 +55,46 @@ class SignUpScreen extends StatelessWidget {
               ),
               CustomTextField(
                 hint: "Full Name",
+                textInputType: TextInputType.text,
               ),
               SizedBox(
                 height: 20.h,
               ),
               CustomTextField(
                 hint: "Phone",
+                textInputType: TextInputType.phone,
               ),
               SizedBox(
                 height: 20.h,
               ),
               CustomTextField(
                 hint: "Email",
+                textInputType: TextInputType.emailAddress,
               ),
               SizedBox(
                 height: 20.h,
               ),
               CustomTextField(
                 hint: "Password",
+                textInputType: TextInputType.visiblePassword,
               ),
               SizedBox(
                 height: 20.h,
               ),
               CustomTextField(
-                hint: "Repassword",
+                hint: "RePassword",
+                textInputType: TextInputType.visiblePassword,
               ),
-              SizedBox(height: 135.h,),
+              SizedBox(
+                height: 60.h,
+              ),
 
               Center(
                   child: CustomElevatedButton(
                 label: "Register",
-                onTap: () {},
+                onTap: () {
+                  Navigator.popAndPushNamed(context, Routes.mainRoute);
+                },
               )),
               SizedBox(
                 height: 30.h,
@@ -130,6 +139,7 @@ class SignUpScreen extends StatelessWidget {
                 ],
               ),
               Spacer()
+
             ],
           ),
         ),

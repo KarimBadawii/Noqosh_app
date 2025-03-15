@@ -5,14 +5,15 @@ import '../utils/styles_manager.dart';
 
 class CustomTextField extends StatelessWidget {
   String hint;
-  CustomTextField({required this.hint});
+  TextInputType textInputType;
+  CustomTextField({super.key, required this.hint,required this.textInputType});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       style: TextStyle(color: ColorManager.white),
       cursorColor: ColorManager.primary,
-      keyboardType: TextInputType.emailAddress,
+      keyboardType: textInputType,
       decoration: InputDecoration(
           focusedBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: ColorManager.primary)),

@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:noqosh_app/config/routes/routes.dart';
 import 'package:noqosh_app/features/auth/presentation/sign_in_screen.dart';
 import 'package:noqosh_app/features/auth/presentation/sign_up_screen.dart';
-import 'package:noqosh_app/features/home/presentation/pages/details_page.dart';
+import 'package:noqosh_app/features/chatbot/chatbot_screen.dart';
 import 'package:noqosh_app/features/home/presentation/pages/home_page.dart';
 import 'package:noqosh_app/features/payment/presentation/pages/payment.dart';
 import 'package:noqosh_app/features/setting/presentation/pages/setting_page.dart';
 import 'package:noqosh_app/features/translate/presentation/pages/translate_page.dart';
 import 'package:noqosh_app/features/trips/presentation/pages/trips_page.dart';
 import '../../features/setting/presentation/pages/edit_profile_page.dart';
+import '../../features/home/presentation/pages/details_page.dart';
 import '../../main_layout.dart';
 class RouteGenerator {
   static Route<dynamic> getRoute(RouteSettings settings) {
@@ -24,7 +25,7 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const MainLayout());
 
       case Routes.homeRoute:
-        return MaterialPageRoute(builder: (_) => const HomeScreen());
+        return MaterialPageRoute(builder: (_) =>  HomeScreen());
 
       case Routes.detailsRoute:
         return MaterialPageRoute(builder: (_) => const DetailsScreen());
@@ -43,6 +44,10 @@ class RouteGenerator {
 
       case Routes.paymentRoute:
         return MaterialPageRoute(builder: (_) => const PaymentScreen());
+
+      case Routes.chatBotRoute:
+        return MaterialPageRoute(builder: (_)=> const ChatBotScreen());
+
 
       default:
         return unDefinedRoute();
