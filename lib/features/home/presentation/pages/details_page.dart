@@ -6,7 +6,6 @@ import 'package:noqosh_app/features/home/presentation/widgets/details_attribute.
 import 'package:noqosh_app/features/home/presentation/widgets/details_preview.dart';
 import '../../../../core/utils/assets_manager.dart';
 import '../../../../core/utils/styles_manager.dart';
-
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
 

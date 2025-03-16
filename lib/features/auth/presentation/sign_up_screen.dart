@@ -6,8 +6,8 @@ import 'package:noqosh_app/core/utils/font_manager.dart';
 import 'package:noqosh_app/core/utils/styles_manager.dart';
 import 'package:noqosh_app/core/utils/values_manager.dart';
 import 'package:noqosh_app/core/widget/custom_elevated_button.dart';
-import 'package:noqosh_app/main.dart';
 
+import '../../../config/routes/routes.dart';
 import '../../../core/widget/custom_text_field.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -21,8 +21,12 @@ class SignUpScreen extends StatelessWidget {
       decoration: BoxDecoration(
           color: ColorManager.secondary,
           image: const DecorationImage(
-              image: AssetImage(ImageAssets.authBg),
-              alignment: Alignment.topCenter)),
+              image: AssetImage(ImageAssets.authBg ,),
+              alignment: Alignment.topCenter,
+              fit: BoxFit.fitWidth
+          )
+
+      ),
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.transparent,
@@ -76,12 +80,55 @@ class SignUpScreen extends StatelessWidget {
               CustomTextField(
                 hint: "Repassword",
               ),
-              Spacer(),
+              SizedBox(height: 135.h,),
+
               Center(
                   child: CustomElevatedButton(
                 label: "Register",
                 onTap: () {},
               )),
+              SizedBox(
+                height: 30.h,
+              ),
+              Center(
+                  child: Text(
+                    "or Signup with",
+                    style: getLightStyle(
+                        color: ColorManager.black, fontSize: FontSize.s18),
+                  )),
+              SizedBox(
+                height: 20.h,
+              ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image(image: AssetImage(ImageAssets.googleButton)),
+                  Image(image: AssetImage(ImageAssets.facebookButton)),
+                  Image(image: AssetImage(ImageAssets.appleButton)),
+                ],
+              ),
+              SizedBox(
+                height: 20.h,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    " Have an account ? ",
+                    style: getLightStyle(
+                        color: ColorManager.black, fontSize: FontSize.s18),
+                  ),
+                  InkWell(
+                      onTap: () =>
+                          Navigator.pushNamed(context, Routes.signInRoute),
+                      child: Text(
+                        "Signin",
+                        style: getBoldStyle(
+                            color: ColorManager.primary,
+                            fontSize: FontSize.s25),
+                      )),
+                ],
+              ),
               Spacer()
             ],
           ),

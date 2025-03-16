@@ -1,3 +1,4 @@
+
 const String imagePath = "assets/images";
 const String jsonPath = "assets/json";
 const String iconsPath = "assets/icons";
@@ -52,6 +53,7 @@ abstract class IconsAssets {
   static const String icDelete = "$iconsPath/ic_delete.png";
   static const String _icHeart = "$iconsPath/heart.png";
   static const String _icClickedHeart = "$iconsPath/clicked_heart.png";
+
 
   static String get icCategory => _icCategory;
   static String get icHome => _icHome;
