@@ -5,6 +5,8 @@ const String svgPath = "assets/svg_images";
 
 abstract class ImageAssets {
   static const String authBg = "$imagePath/auth.bg.png";
+  static const String homeBg = "$imagePath/home_bg.png";
+  static const String splashBg = "$imagePath/splash_screen.png";
   static const String googleButton = "$imagePath/google_buttom.png";
   static const String facebookButton = "$imagePath/facebook buttom.png";
   static const String appleButton = "$imagePath/Apple buttom.png";
@@ -36,6 +38,7 @@ abstract class ImageAssets {
 
 class SvgAssets{
   static const String googleButton = "$svgPath/google_buttom.svg";
+  static const String chatGbtIcon = "$svgPath/chat_bot_icon.svg";
   static const String home = "$svgPath/material-symbols_home-rounded.svg";
   static const String translate = "$svgPath/hugeicons--translate.svg";
   static const String trips = "$svgPath/material-symbols_trip_edited.svg";
