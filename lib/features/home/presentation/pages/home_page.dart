@@ -10,7 +10,6 @@ import 'package:noqosh_app/core/utils/values_manager.dart';
 import 'package:noqosh_app/core/widget/custom_elevated_button.dart';
 import 'package:noqosh_app/features/home/presentation/widgets/user_home_widget.dart';
 import 'package:noqosh_app/features/payment/presentation/widgets/large_buttom.dart';
-
 import '../../../../core/utils/styles_manager.dart';
 import '../widgets/notification_widget.dart';
 import '../widgets/search_bar_widget.dart';
@@ -27,6 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
       decoration: const BoxDecoration(
           image: DecorationImage(

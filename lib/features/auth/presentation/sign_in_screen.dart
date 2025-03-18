@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:noqosh_app/config/routes/route_generator.dart';
 import 'package:noqosh_app/config/routes/routes.dart';
 import 'package:noqosh_app/core/utils/assets_manager.dart';
 import 'package:noqosh_app/core/utils/color_manager.dart';
@@ -9,7 +7,6 @@ import 'package:noqosh_app/core/utils/font_manager.dart';
 import 'package:noqosh_app/core/utils/styles_manager.dart';
 import 'package:noqosh_app/core/utils/values_manager.dart';
 import 'package:noqosh_app/core/widget/custom_elevated_button.dart';
-import 'package:noqosh_app/main.dart';
 
 import '../../../core/widget/custom_text_field.dart';
 
@@ -25,7 +22,8 @@ class SignInScreen extends StatelessWidget {
           color: ColorManager.secondary,
           image: const DecorationImage(
               image: AssetImage(ImageAssets.authBg),
-              alignment: Alignment.topCenter)),
+              alignment: Alignment.topCenter,
+              fit: BoxFit.fitWidth)),
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.transparent,
@@ -78,7 +76,7 @@ class SignInScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 100.h,
+                height: 210.h,
               ),
               Center(
                   child: CustomElevatedButton(
@@ -119,12 +117,14 @@ class SignInScreen extends StatelessWidget {
                         color: ColorManager.black, fontSize: FontSize.s18),
                   ),
                   InkWell(
-                     onTap: () => Navigator.pushNamed(context,Routes.signUpRoute),
+                      onTap: () =>
+                          Navigator.pushNamed(context, Routes.signUpRoute),
                       child: Text(
-                    "Signup",
-                    style: getBoldStyle(
-                        color: ColorManager.primary, fontSize: FontSize.s25),
-                  )),
+                        "Signup",
+                        style: getBoldStyle(
+                            color: ColorManager.primary,
+                            fontSize: FontSize.s25),
+                      )),
                 ],
               ),
             ],

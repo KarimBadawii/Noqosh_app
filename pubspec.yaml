@@ -40,9 +40,11 @@ dependencies:
   dartz: ^0.10.1
   shared_preferences: ^2.2.3
   flutter_svg: ^2.0.10
+  circle_avatar: ^1.0.1
   google_generative_ai: ^0.4.6
   intl: ^0.20.2
   flutter_native_splash:
+
 
 dev_dependencies:
   flutter_test:

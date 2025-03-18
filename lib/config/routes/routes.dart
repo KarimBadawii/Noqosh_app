@@ -9,6 +9,9 @@ class Routes {
   static const String tripsRoute = "/trips";
   static const String settingsRoute = "/settings";
   static const String paymentRoute = "/payment";
+
+  static const String editProfileRoute = "/editProfile";
+
   static const String chatBotRoute = "/chatBot";
 
 }

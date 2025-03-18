@@ -8,7 +8,7 @@ import 'package:noqosh_app/features/payment/presentation/pages/payment.dart';
 import 'package:noqosh_app/features/setting/presentation/pages/setting_page.dart';
 import 'package:noqosh_app/features/translate/presentation/pages/translate_page.dart';
 import 'package:noqosh_app/features/trips/presentation/pages/trips_page.dart';
-
+import '../../features/setting/presentation/pages/edit_profile_page.dart';
 import '../../features/home/presentation/pages/details_page.dart';
 import '../../main_layout.dart';
 class RouteGenerator {
@@ -38,6 +38,9 @@ class RouteGenerator {
 
       case Routes.settingsRoute:
         return MaterialPageRoute(builder: (_) => const SettingScreen());
+
+        case Routes.editProfileRoute:
+        return MaterialPageRoute(builder: (_) => const EditProfileScreen());
 
       case Routes.paymentRoute:
         return MaterialPageRoute(builder: (_) => const PaymentScreen());
