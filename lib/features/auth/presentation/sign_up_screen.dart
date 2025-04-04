@@ -6,8 +6,8 @@ import 'package:noqosh_app/core/utils/font_manager.dart';
 import 'package:noqosh_app/core/utils/styles_manager.dart';
 import 'package:noqosh_app/core/utils/values_manager.dart';
 import 'package:noqosh_app/core/widget/custom_elevated_button.dart';
-import 'package:noqosh_app/main.dart';
 
+import '../../../config/routes/routes.dart';
 import '../../../core/widget/custom_text_field.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -15,23 +15,29 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Container(
       width: double.infinity,
       height: double.infinity,
       decoration: BoxDecoration(
           color: ColorManager.secondary,
           image: const DecorationImage(
-              image: AssetImage(ImageAssets.authBg),
-              alignment: Alignment.topCenter)),
+              image: AssetImage(ImageAssets.authBg ,),
+              alignment: Alignment.topCenter,
+              fit: BoxFit.fitWidth
+          )
+
+      ),
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.transparent,
         body: Padding(
           padding: EdgeInsets.only(
-              top: AppPadding.p40.h,
-              right: AppPadding.p20.w,
-              left: AppPadding.p20.w,
-              bottom: AppPadding.p8.h),
+            top: height * .05,
+            right:width * .05,
+            left: width * .05,
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -40,49 +46,57 @@ class SignUpScreen extends StatelessWidget {
                 style: getSemiBoldStyle(color: ColorManager.white),
               ),
               SizedBox(
-                  width: 30,
+                  width: width * .10,
                   child: Divider(
                     color: ColorManager.white,
                     thickness: 3.h,
-                    height: 10.h,
                   )),
               SizedBox(
-                height: 20.h,
+                height: height * .01,
               ),
               CustomTextField(
                 hint: "Full Name",
+                textInputType: TextInputType.text,
               ),
               SizedBox(
-                height: 20.h,
+                height: height * .04,
               ),
               CustomTextField(
                 hint: "Phone",
+                textInputType: TextInputType.phone,
               ),
               SizedBox(
-                height: 20.h,
+                height: height * .04,
               ),
               CustomTextField(
                 hint: "Email",
+                textInputType: TextInputType.emailAddress,
               ),
               SizedBox(
-                height: 20.h,
+                height: height * .04,
               ),
               CustomTextField(
                 hint: "Password",
+                textInputType: TextInputType.visiblePassword,
               ),
               SizedBox(
-                height: 20.h,
+                height: height * .04,
               ),
               CustomTextField(
-                hint: "Repassword",
+                hint: "RePassword",
+                textInputType: TextInputType.visiblePassword,
               ),
-              Spacer(),
+              SizedBox(
+                height: height * .04,
+              ),
+
               Center(
                   child: CustomElevatedButton(
-                label: "Register",
-                onTap: () {},
-              )),
-              Spacer()
+                    label: "Register",
+                    onTap: () {
+                      Navigator.popAndPushNamed(context, Routes.mainRoute);
+                    },
+                  )),
             ],
           ),
         ),
